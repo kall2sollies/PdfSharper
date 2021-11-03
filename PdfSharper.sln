@@ -13,6 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_sln", "_sln", "{DBABA48A-5
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E58FD3C1-24E4-4479-A4DC-9006B3073F88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jazz-books", "jazz-books", "{2222DEE8-2DCD-4BFE-9B76-E09A5310ED6C}"
+	ProjectSection(SolutionItems) = preProject
+		docs\jazz-books\__Master Index__.xlsx = docs\jazz-books\__Master Index__.xlsx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +48,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1D216600-C437-488F-A845-4086180B4881} = {CB60AE63-C972-4C62-9844-DC7485B4F695}
+		{2222DEE8-2DCD-4BFE-9B76-E09A5310ED6C} = {E58FD3C1-24E4-4479-A4DC-9006B3073F88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC9EE420-419D-4785-BD3B-D305196249D5}
