@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
-using Aspose.Pdf;
+using iText.Kernel.Pdf;
 
 namespace PdfSharper.Cli
 {
@@ -29,13 +28,13 @@ namespace PdfSharper.Cli
             if (File.Exists(outputPath)) File.Delete(outputPath);
 
             // Open document
-            var pdfDocument = new Document(filePath);
-            var startIndex = page - 1;
-            var endIndex = page + length - 1;
-            var outputDocument = new Document();
-            var pagesToExtract = pdfDocument.Pages.Where(x => x.Number >= page).Take(length).ToList();
-            outputDocument.Pages.Add(pagesToExtract);
-            outputDocument.Save(outputPath);
+            var pdfDocument = new PdfDocument(new PdfReader(filePath));
+
+            // Write selected range
+            var outPdfDocument = new PdfDocument(new PdfWriter(outputPath));
+            pdfDocument.CopyPagesTo(page, page + length - 1, outPdfDocument);
+            outPdfDocument.Close();
+            pdfDocument.Close();
         }
     }
 }
