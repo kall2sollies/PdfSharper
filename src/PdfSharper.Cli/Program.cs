@@ -12,10 +12,10 @@ namespace PdfSharper.Cli
             var pdfDirectory = "D:\\Documents\\Dev\\PdfSharper\\docs\\jazz-books";
 
             // params to be automated from CSV reading
-            var title = "Desafinado";
+            var title = "Lush Life";
             var fileName = "New Real Book I";
             var fileNameWithExt = $"{fileName}.pdf";
-            var page = 80;
+            var page = 212;
             var length = 2;
             var filePath = Path.Combine(pdfDirectory, fileNameWithExt);
 
